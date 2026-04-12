@@ -5,7 +5,7 @@ body {
     padding: 20px;
 }
 
-
+/* PLATNO */
 .screen {
     margin: 20px auto;
     padding: 10px;
@@ -14,13 +14,14 @@ body {
     width: 80%;
 }
 
+/* SALA */
 .hall {
     display: grid;
     gap: 10px;
     justify-content: center;
 }
 
-
+/* RED */
 .row {
     display: grid;
     grid-template-columns: 30px repeat(10, 30px);
@@ -28,31 +29,31 @@ body {
     align-items: center;
 }
 
-
+/* OZNAKA REDA */
 .label {
     font-weight: bold;
 }
 
-
+/* SJEDIŠTA */
 .seat {
     width: 30px;
     height: 30px;
 }
 
-
-.free {
+/* BOJE (OVE koristi JS) */
+.slobodno {
     background-color: green;
 }
 
-.taken {
+.zauzeto {
     background-color: red;
 }
 
-.reserved {
+.rezervisano {
     background-color: gray;
 }
 
-
+/* RESPONSIVE */
 @media (max-width: 600px) {
     .row {
         grid-template-columns: 20px repeat(10, 20px);
