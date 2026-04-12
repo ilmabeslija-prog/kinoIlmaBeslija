@@ -1,48 +1,39 @@
-const podaci = {
-    film: "Fast X",
-    vrijeme: "20:00",
-    sala: "Sala 3",
+function generisiSjedista() {
+    const redovi = ["A","B","C","D","E","F","G","H"];
+    const sjedista = [];
 
-    sjedista: [
-        ["free","free","taken","free","reserved","free","taken","free","free","reserved"],
-        ["free","taken","free","reserved","free","free","taken","free","reserved","free"],
-        ["free","free","reserved","taken","free","free","reserved","free","taken","free"],
-        ["taken","free","free","reserved","free","taken","free","free","reserved","free"],
-        ["free","reserved","free","taken","free","free","reserved","free","taken","free"],
-        ["free","free","taken","free","reserved","free","free","taken","free","reserved"],
-        ["reserved","free","free","taken","free","free","reserved","free","taken","free"],
-        ["free","taken","free","free","reserved","free","taken","free","free","reserved"]
-    ]
-};
+    for (let red of redovi) {
+        for (let i = 1; i <= 10; i++) {
 
-const salaDiv = document.getElementById("sala");
+            let status = "slobodno";
 
-document.getElementById("film").textContent = podaci.film;
-document.getElementById("vrijeme").textContent = "Vrijeme: " + podaci.vrijeme;
-document.getElementById("salaNaziv").textContent = podaci.sala;
+            if (Math.random() < 0.2) status = "zauzeto";
+            else if (Math.random() < 0.3) status = "rezervisano";
 
-salaDiv.innerHTML = "";
-
-let slova = ["A","B","C","D","E","F","G","H"];
-
-for (let i = 0; i < podaci.sjedista.length; i++) {
-
-    let rowDiv = document.createElement("div");
-    rowDiv.classList.add("row");
-
-    let label = document.createElement("div");
-    label.classList.add("label");
-    label.textContent = slova[i];
-    rowDiv.appendChild(label);
-
-    for (let j = 0; j < podaci.sjedista[i].length; j++) {
-
-        let seat = document.createElement("div");
-        seat.classList.add("seat");
-        seat.classList.add(podaci.sjedista[i][j]);
-
-        rowDiv.appendChild(seat);
+            sjedista.push({
+                red: red,
+                broj: i,
+                status: status
+            });
+        }
     }
 
-    salaDiv.appendChild(rowDiv);
+    return sjedista;
 }
+
+const podaci = {
+    projekcije: [
+        {
+            film: "Avatar 2",
+            vrijeme: "18:00",
+            sala: "1", 
+            sjedista: generisiSjedista()
+        },
+        {
+            film: "Fast X",
+            vrijeme: "20:00",
+            sala: "3", 
+            sjedista: generisiSjedista()
+        }
+    ]
+};
