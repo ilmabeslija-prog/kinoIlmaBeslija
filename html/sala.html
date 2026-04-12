@@ -1,138 +1,23 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala</title>
+<meta charset="UTF-8">
+<title>Sala</title>
 
- 
-    <link rel="stylesheet" href="sala.css">
+<link rel="stylesheet" href="sala.css">
 </head>
+
 <body>
 
-  
-    <h1>Fast X</h1>
-    <h2>Vrijeme: 20:00</h2>
-    <h3>Sala 3</h3>
+<div id="sala"></div>
 
-    <div class="screen">PLATNO</div>
+<div style="margin:20px;">
+    <button onclick="prethodna()">Prethodna</button>
+    <button onclick="sljedeca()">Sljedeća</button>
+</div>
 
-   
-    <div class="hall">
-
-        <div class="row">
-            <div class="label">A</div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">B</div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">C</div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">D</div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">E</div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">F</div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">G</div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-        </div>
-
-        <div class="row">
-            <div class="label">H</div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-            <div class="seat free"></div>
-            <div class="seat taken"></div>
-            <div class="seat free"></div>
-            <div class="seat free"></div>
-            <div class="seat reserved"></div>
-        </div>
-
-    </div>
+<script src="scripts/app.js"></script>
+<script src="scripts/kinoSala.js"></script>
 
 </body>
 </html>
